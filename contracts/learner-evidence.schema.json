@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"urn:zaowu:learner-evidence:v1",
+  "title":"EvidenceEvent (local trial)","type":"object","additionalProperties":false,
+  "required":["id","childId","projectId","taskId","skillId","contentKey","context","attempt","hintUsed","outcome","at","rubricVersion"],
+  "properties":{
+    "id":{"type":"string","maxLength":100},"childId":{"type":"string","maxLength":100},
+    "projectId":{"type":"string","maxLength":100},"taskId":{"type":"string","maxLength":80},
+    "skillId":{"enum":["comparison","pattern","sequence","cause","reflection"]},
+    "contentKey":{"type":"string","maxLength":160},"context":{"type":"string","maxLength":160},
+    "attempt":{"type":"integer","minimum":1,"maximum":100},"hintUsed":{"type":"boolean"},
+    "outcome":{"enum":["independent","supported","retry","observation","uncertain"]},
+    "at":{"type":"string","format":"date-time"},"rubricVersion":{"const":"local-rubric/1"},
+    "retracted":{"type":"boolean"},"retractedAt":{"type":"string","format":"date-time"},
+    "retractionReason":{"const":"guardian_correction"}
+  }
+}

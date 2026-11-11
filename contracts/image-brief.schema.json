@@ -1,0 +1,12 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:zaowu:image-brief:v1",
+ "title":"ImageBrief (future API)","type":"object","additionalProperties":false,
+ "required":["subject","setting","palette","style","purpose","childDecisionIds"],
+ "properties":{
+  "subject":{"type":"string","minLength":1,"maxLength":120},"setting":{"type":"string","maxLength":120},
+  "palette":{"type":"string","maxLength":80},"style":{"type":"string","maxLength":80},
+  "purpose":{"enum":["character","scene","sticker","cover","project-asset"]},
+  "childDecisionIds":{"type":"array","minItems":3,"maxItems":20,"uniqueItems":true,"items":{"type":"string"}},
+  "changeRequest":{"type":"string","maxLength":160}
+ }
+}

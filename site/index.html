@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6d58a0">
+  <meta name="description" content="造物：了解你的兴趣与创作经历，陪你一步一步做出自己的小世界。家长陪同，本地试用。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>造物 · 小小想法，慢慢长大</title>
+</head>
+<body>
+ <a class="skip" href="#main">跳到内容</a>
+ <header class="topbar">
+  <a class="brand" href="#home" aria-label="造物首页"><span class="brand-symbol">✳</span><strong>造物<span>ZAOWU</span></strong></a>
+  <nav aria-label="主导航"><a href="#home">创作岛</a><a href="#art">插画工坊</a><a href="#gallery">我的作品</a><a href="#parent" class="parent-link">家长空间</a></nav>
+ </header>
+ <div id="mode-label" class="mode-strip">本地引导试用 · 不接大模型 / Vivix / 云端生图 · 不采集麦克风与摄像头</div>
+ <main id="main" tabindex="-1"></main>
+ <div id="toast" role="status" aria-live="polite"></div>
+ <footer><span>每个想法都值得被认真对待。</span><span>v0.1.0 · 家长陪同 · <a href="#privacy">隐私与试用说明</a> · <a href="https://github.com/luxiaolei/zaowu" target="_blank" rel="noopener noreferrer">开源仓库 ↗</a></span></footer>
+ <script type="module" src="src/app.js"></script>
+</body>
+</html>

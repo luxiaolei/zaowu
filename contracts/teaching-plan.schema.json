@@ -1,0 +1,15 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:zaowu:teaching-plan:v1",
+ "title":"TeachingPlan (future API)","type":"object","additionalProperties":false,
+ "required":["planId","childId","contextVersion","projectKind","targetSkillIds","rationale","sourceEvidenceIds","supportLevel","nextPrompt","childDecisionRequired","allowedActions","policyVersion"],
+ "properties":{
+  "planId":{"type":"string"},"childId":{"type":"string"},"contextVersion":{"type":"string"},
+  "projectKind":{"enum":["sky","garden","story"]},
+  "targetSkillIds":{"type":"array","minItems":1,"maxItems":3,"items":{"enum":["comparison","pattern","sequence","cause","reflection"]}},
+  "rationale":{"type":"string","maxLength":500},"sourceEvidenceIds":{"type":"array","maxItems":15,"items":{"type":"string"}},
+  "supportLevel":{"type":"integer","minimum":0,"maximum":4},"nextPrompt":{"type":"string","maxLength":200},
+  "childDecisionRequired":{"type":"boolean"},
+  "allowedActions":{"type":"array","maxItems":6,"items":{"enum":["choose","hint","propose_patch","test","reflect","save"]}},
+  "policyVersion":{"type":"string"}
+ }
+}
