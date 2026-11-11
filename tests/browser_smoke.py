@@ -2,7 +2,7 @@
 import json, os, mimetypes
 from urllib.parse import urlparse, unquote
 from pathlib import Path
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 HERMETIC=os.getenv('ZAOWU_HERMETIC')=='1'
 BASE='https://zaowu.test' if HERMETIC else os.getenv('ZAOWU_TEST_URL','http://127.0.0.1:4173')
@@ -96,8 +96,9 @@ with sync_playwright() as pw:
     page.reload() # Persisted draft, route safely returns home if no in-memory current ID.
     page.locator('[data-resume]').wait_for()
     page.locator('[data-resume]').click()
-    assert page.locator('h2').inner_text()=='给它一点你的颜色'
+    expect(page.locator('h2')).to_have_text('给它一点你的颜色')
     page.locator('nav a[href="#parent"]').click()
+    page.wait_for_function("!!document.querySelector('input[name=guardian], [data-delete]')")
     if page.locator('input[name=guardian]').count():
         page.locator('input[name=guardian]').check()
         page.get_by_role('button',name='进入家长空间').click()

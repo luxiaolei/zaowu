@@ -6,7 +6,7 @@
 
 [打开本地引导试用](https://luxiaolei.github.io/zaowu/) · [产品需求](docs/PRD.md) · [学习者模型](docs/LEARNER_MODEL.md) · [教学设计](docs/TEACHING_DESIGN.md) · [开发路线](docs/ROADMAP.md)
 
-> **v0.1.0 是本地规则引导试用，不是真实大模型产品。** 可以完成三个创作项目、保存作品与学习证据、根据历史重新推荐，并使用本地插画工坊。尚未接通 DeepTutor、LLM、语音、Vivix 或云端生图；不需要 API Key，不产生模型调用费用。在线站点是否已发布，以 GitHub Pages 部署状态为准。
+> **v0.1.0 是本地规则引导试用，不是真实大模型产品。** 可以完成三个创作项目、保存作品与学习证据、根据历史重新推荐，并使用本地插画工坊。尚未接通 DeepTutor、LLM、语音、Vivix 或云端生图；不需要 API Key，不产生模型调用费用。在线试用已发布；测试范围与未验证事项见 [验证记录](docs/VERIFICATION.md)。
 
 ## 从哪里开始
 
